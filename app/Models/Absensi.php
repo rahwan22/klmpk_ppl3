@@ -9,9 +9,10 @@ class Absensi extends Model
     protected $primaryKey = 'id_absensi';
     protected $fillable = ['nis', 'id_guru', 'id_admin', 'tanggal', 'jam', 'lokasi', 'status', 'sumber', 'device_id', 'synced'];
 
+
     public function siswa()
     {
-        return $this->belongsTo(Siswa::class, 'nis', 'nis');
+        return $this->belongsTo(Siswa::class, '', 'nis');
     }
 
     public function guru()
