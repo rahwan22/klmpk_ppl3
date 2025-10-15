@@ -13,7 +13,7 @@ return new class extends Migration {
             $table->id('id_guru');
             $table->string('nip', 20)->nullable();
             $table->string('nama', 100);
-            $table->enum('role', ['guru', 'guru_piket', 'wali_kelas', 'admin'])->default('guru');
+            $table->enum('role', [ 'guru_piket', 'wali_kelas', 'admin'])->default('guru_piket');
             $table->string('password_hash', 255);
             $table->timestamps();
         });
@@ -37,7 +37,6 @@ return new class extends Migration {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id('id_kelas');
             $table->string('nama_kelas', 50);
-            $table->string('jurusan', 50)->nullable();
             $table->foreignId('id_guru_wali')
                 ->nullable()
                 ->constrained('guru', 'id_guru')

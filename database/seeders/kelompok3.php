@@ -37,7 +37,7 @@ class kelompok3 extends Seeder
             [
                 'nip' => '1989101020080103',
                 'nama' => 'Rahmat Hidayat',
-                'role' => 'guru',
+                'role' => 'admin',
                 'password_hash' => Hash::make('password'),
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -48,7 +48,6 @@ class kelompok3 extends Seeder
         DB::table('kelas')->insert([
             [
                 'nama_kelas' => '6A',
-                'jurusan' => '',
                 'id_guru_wali' => 1,
                 'kontak' => '08123456789',
                 'created_at' => now(),
@@ -56,7 +55,6 @@ class kelompok3 extends Seeder
             ],
             [
                 'nama_kelas' => '6B',
-                'jurusan' => '',
                 'id_guru_wali' => 3,
                 'kontak' => '08129876543',
                 'created_at' => now(),
@@ -64,7 +62,6 @@ class kelompok3 extends Seeder
             ],
             [
                 'nama_kelas' => '5A',
-                'jurusan' => '',
                 'id_guru_wali' => 2,
                 'kontak' => '081300112233',
                 'created_at' => now(),
