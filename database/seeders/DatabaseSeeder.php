@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('admin123'),
                 'role' => 'admin',
-            
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -28,7 +27,6 @@ class DatabaseSeeder extends Seeder
                 'email' => 'kepala@gmail.com',
                 'password' => Hash::make('kepala123'),
                 'role' => 'kepala_sekolah',
-            
                 'created_at' => now(),
                 'updated_at' => now()
             ],
@@ -38,7 +36,6 @@ class DatabaseSeeder extends Seeder
                 'email' => 'guru1@gmail.com',
                 'password' => Hash::make('guru123'),
                 'role' => 'guru',
-                'aktif' => true,
                 'created_at' => now(),
                 'updated_at' => now()
             ],
