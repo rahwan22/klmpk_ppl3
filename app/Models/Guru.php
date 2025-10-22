@@ -6,22 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class Guru extends Model
 {
-    protected $table = 'guru';
     protected $primaryKey = 'id_guru';
-    protected $fillable = ['nip', 'nama', 'role', 'password_hash'];
+    protected $fillable = ['nip','nama','email','id_user'];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'id_user', 'id_user');
+    }
 
     public function kelas()
     {
-        return $this->hasOne(Kelas::class, 'id_guru_wali', 'id_guru');
+        return $this->hasMany(Kelas::class, 'id_wali_kelas', 'id_guru');
     }
 
-    public function admin()
+    public function mapel()
     {
-        return $this->hasOne(Admin::class, 'id_guru', 'id_guru');
-    }
-
-    public function absensi()
-    {
-        return $this->hasMany(Absensi::class, 'id_guru', 'id_guru');
+        return $this->hasMany(GuruMataPelajaran::class, 'id_guru', 'id_guru');
     }
 }

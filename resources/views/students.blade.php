@@ -8,7 +8,7 @@
   </div>
   <table>
     <thead>
-      <tr><th>No</th><th>NIS</th><th>Nama</th><th>Kelas</th><th>Aksi</th></tr>
+      <tr><th>No</th><th>NIs</th><th>Nama</th><th>Kelas</th><th>Aksi</th></tr>
     </thead>
     <tbody>
       <tr><td>1</td><td>0001</td><td>Ahmad</td><td>X IPA 1</td><td><button class="btn ghost">Edit</button></td></tr>

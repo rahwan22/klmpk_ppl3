@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Siswa extends Model
 {
-    protected $table = 'siswa';
     protected $primaryKey = 'nis';
-    public $incrementing = false; // karena primary key bukan integer auto increment
-    protected $fillable = ['nis', 'nama', 'tanggal_lahir', 'id_kelas', 'qr_code', 'id_orangtua', 'aktif'];
+    public $incrementing = false;
+    protected $keyType = 'string';
+    protected $fillable = ['nis','nama','tanggal_lahir','id_kelas','qr_code','id_orangtua','aktif'];
 
     public function kelas()
     {
@@ -24,5 +24,10 @@ class Siswa extends Model
     public function absensi()
     {
         return $this->hasMany(Absensi::class, 'nis', 'nis');
+    }
+
+    public function nilai()
+    {
+        return $this->hasMany(Nilai::class, 'nis', 'nis');
     }
 }

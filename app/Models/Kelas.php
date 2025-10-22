@@ -1,18 +1,17 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Kelas extends Model
 {
-    protected $table = 'kelas';
     protected $primaryKey = 'id_kelas';
-    protected $fillable = ['nama_kelas', 'jurusan', 'id_guru_wali', 'kontak'];
+    protected $fillable = ['nama_kelas','id_wali_kelas','kontak'];
 
-    
     public function waliKelas()
     {
-        return $this->belongsTo(Guru::class, 'id_guru_wali', 'id_guru');
+        return $this->belongsTo(Guru::class, 'id_wali_kelas', 'id_guru');
     }
 
     public function siswa()
