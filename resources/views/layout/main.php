@@ -44,7 +44,7 @@
   <div class="container-fluid">
     <div class="row">
       <!-- Sidebar -->
-      <div class="col-md-2 sidebar">
+       <div class="col-md-2 sidebar">
         <h5 class="text-center mb-4">Guru Panel</h5>
         <a href="{{ route('guru.dashboard') }}" class="{{ request()->routeIs('guru.dashboard') ? 'active' : '' }}"><i class="bi bi-house"></i> Dashboard</a>
         <a href="{{ route('guru.absensi.daftar') }}" class="{{ request()->routeIs('guru.absensi.*') ? 'active' : '' }}"><i class="bi bi-card-checklist"></i> Data Absensi</a>
@@ -57,10 +57,12 @@
         <hr>
         <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
       </div>
+      
+      
 
       <!-- Content -->
       <div class="col-md-10 content">
-        @yield('content')
+        <!-- @yield('content') -->
       </div>
     </div>
   </div>
