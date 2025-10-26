@@ -52,7 +52,6 @@
         <a href="{{ route('guru.absensi.rekap') }}"><i class="bi bi-bar-chart"></i> Rekap Absensi</a>
         <a href="{{ route('guru.izin.form') }}"><i class="bi bi-pencil-square"></i> Input Izin/Sakit</a>
         <a href="{{ route('guru.laporan.kelas') }}"><i class="bi bi-file-earmark-text"></i> Laporan Kelas</a>
-        <a href="{{ route('guru.pengumuman') }}"><i class="bi bi-megaphone"></i> Pengumuman</a>
         <a href="{{ route('guru.profil') }}"><i class="bi bi-person"></i> Profil</a>
         <hr>
         <a href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
@@ -60,7 +59,10 @@
 
       <!-- Content -->
       <div class="col-md-10 content">
+
         @yield('content')
+
+
       </div>
     </div>
   </div>
