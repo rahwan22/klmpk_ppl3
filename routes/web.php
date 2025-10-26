@@ -82,7 +82,7 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 // Dashboard
 Route::get('/dashboard-guru', function () {
     return view('guru.dashboard-guru');
-})->name('guru.dashboard-guru');
+})->name('guru.dashboard');
 
 // Data Absensi
 Route::get('/absensi-daftar', function () {
@@ -117,6 +117,6 @@ Route::get('/profil-guru', function () {
 
 // Profil Guru
 Route::get('/', function () {
-    return view('layout.main');
+    return view('layout.layout-guru');
 });
 
