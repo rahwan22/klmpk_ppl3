@@ -11,15 +11,15 @@ Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 
 
 
-Route::get('/', fn() => redirect()->route('dashboard'));
+// Route::get('/', fn() => redirect()->route('dashboard'));
 
 
-Route::view('/dashboard', 'dashboard', ['title' => 'Dashboard', 'subtitle' => 'Rekap Harian'])->name('dashboard');
-Route::view('/students', 'students', ['title' => 'Data Siswa'])->name('students');
-Route::view('/generate', 'generate', ['title' => 'Generate & Cetak QR'])->name('generate');
-Route::view('/scan', 'scan', ['title' => 'Scan Absensi'])->name('scan');
-Route::view('/reports', 'reports', ['title' => 'Laporan Absensi'])->name('reports');
-Route::view('/settings', 'settings', ['title' => 'Pengaturan'])->name('settings');
+// Route::view('/dashboard', 'dashboard', ['title' => 'Dashboard', 'subtitle' => 'Rekap Harian'])->name('dashboard');
+// Route::view('/students', 'students', ['title' => 'Data Siswa'])->name('students');
+// Route::view('/generate', 'generate', ['title' => 'Generate & Cetak QR'])->name('generate');
+// Route::view('/scan', 'scan', ['title' => 'Scan Absensi'])->name('scan');
+// Route::view('/reports', 'reports', ['title' => 'Laporan Absensi'])->name('reports');
+// Route::view('/settings', 'settings', ['title' => 'Pengaturan'])->name('settings');
 
 
 
@@ -82,7 +82,7 @@ Route::view('/settings', 'settings', ['title' => 'Pengaturan'])->name('settings'
 // Dashboard
 Route::get('/dashboard-guru', function () {
     return view('guru.dashboard-guru');
-})->name('guru.dashboard');
+})->name('guru.dashboard-guru');
 
 // Data Absensi
 Route::get('/absensi-daftar', function () {
@@ -113,4 +113,10 @@ Route::get('/laporan-kelas', function () {
 Route::get('/profil-guru', function () {
     return view('guru.profil');
 })->name('guru.profil');
+
+
+// Profil Guru
+Route::get('/', function () {
+    return view('layout.main');
+});
 
